@@ -64,9 +64,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$ <span id="subtotal">1,278</span></h5>
+                        <h5>$ <span id="subtotal">1278</span></h5>
                         <h5>$0</h5>
-                        <h5>$<span id="total">1,278</span></h5>
+                        <h5>$<span id="total">1278</span></h5>
                      </div>
                   </div>
                </div>
@@ -84,44 +84,77 @@
       plus1Btn.addEventListener("click", function(){
          const item1=document.getElementById("item1").value;
          const totalValue=document.getElementById("total-value").innerText;
+//Subtotal 
+const subtotal=document.getElementById("subtotal").innerText;
+var subtotalNum=parseFloat(subtotal);
+//total
+const total=document.getElementById("total").innerText;
+var totalNum=parseFloat(total);
          var totalValueNum=parseFloat(totalValue);
          var itemNum=parseFloat(item1);
          var itemNum=itemNum+1;
-
          var totalValue2=1219*itemNum;
-
+//subtotal value
+subtotalNum=1219+subtotalNum;
+//total value
+totalNum=1219+totalNum;
          document.getElementById("item1").value=itemNum;
          document.getElementById("total-value").innerText=totalValue2;
-
+         document.getElementById("subtotal").innerText=subtotalNum;
+         document.getElementById("total").innerText=totalNum;
       })
       //Removing cart item
       const minus1Btn=document.getElementById("minus1");
       minus1Btn.addEventListener("click", function(){
          const item1=document.getElementById("item1").value;
          const totalValue=document.getElementById("total-value").innerText;
+//subtotal
+const subtotal=document.getElementById("subtotal").innerText;
+var subtotalNum=parseFloat(subtotal);
+//total
+const total=document.getElementById("total").innerText;
+var totalNum=parseFloat(total);
          var totalValueNum=parseFloat(totalValue);
          var itemNum=parseFloat(item1);
          var itemNum=itemNum-1;
          var totalValue2=totalValueNum-1219;
+//subtotal value
+subtotalNum=subtotalNum-1219;
+//total value
+totalNum=totalNum-1219;
          document.getElementById("item1").value=itemNum;
          document.getElementById("total-value").innerText=totalValue2;
+         document.getElementById("subtotal").innerText=subtotalNum;
+         document.getElementById("total").innerText=totalNum;
       })
 
 
 //another cart
-
+//Adding cart
 const plusBtn=document.getElementById("plus");
       plusBtn.addEventListener("click", function(){
          const item=document.getElementById("item").value;
          const totalValue1=document.getElementById("total-value1").innerText;
+//Subtotal 
+const subtotal=document.getElementById("subtotal").innerText;
+var subtotalNum=parseFloat(subtotal);
+//total
+const total=document.getElementById("total").innerText;
+var totalNum=parseFloat(total);
+
          var totalValueNum=parseFloat(totalValue1);
          var itemNum=parseFloat(item);
          var itemNum=itemNum+1;
-
          var totalValue2=59*itemNum;
 
+//subtotal value
+ subtotalNum=59+subtotalNum;
+//total value
+totalNum=59+totalNum;
          document.getElementById("item").value=itemNum;
          document.getElementById("total-value1").innerText=totalValue2;
+         document.getElementById("subtotal").innerText=subtotalNum;
+         document.getElementById("total").innerText=totalNum;
 
       })
       //Removing cart item
@@ -129,17 +162,26 @@ const plusBtn=document.getElementById("plus");
       minusBtn.addEventListener("click", function(){
          const item=document.getElementById("item").value;
          const totalValue1=document.getElementById("total-value1").innerText;
+//subtotal
+const subtotal=document.getElementById("subtotal").innerText;
+var subtotalNum=parseFloat(subtotal);
+//total
+const total=document.getElementById("total").innerText;
+var totalNum=parseFloat(total);
+
          var totalValueNum=parseFloat(totalValue1);
          var itemNum=parseFloat(item);
          var itemNum=itemNum-1;
          var totalValue2=totalValueNum-59;
+//subtotal value
+subtotalNum=subtotalNum-59;
+//total value
+totalNum=totalNum-59;
          document.getElementById("item").value=itemNum;
          document.getElementById("total-value1").innerText=totalValue2;
+         document.getElementById("subtotal").innerText=subtotalNum;
+         document.getElementById("total").innerText=totalNum;
       })
-
-      //Subtotal & total
-      
-      
 
    </script>
 </body>
